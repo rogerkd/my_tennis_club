@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$oo*huj+7*8!-(25#677(-43q&%&bd6wg&4f74rkdn_gz$#&mw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -83,16 +83,18 @@ WSGI_APPLICATION = 'my_tennis_club.wsgi.application'
 # }
 
 # Using Postgres Database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'MyTennisClub',
-        'USER': 'postgres',
-        'PASSWORD': 'system',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'MyTennisClub',
+#         'USER': 'postgres',
+#         'PASSWORD': 'system',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
+DATABASES = {}
 
 
 # Password validation
