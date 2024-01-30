@@ -1,0 +1,29 @@
+{% extends 'master.html' %}
+
+
+{% block content %}
+<div>
+    <table style="width:100%">
+        <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Phone</th>
+            <th>Joined_Date</th>
+        </tr>
+
+        {% for i in mymember2 %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.firstname}}</td>
+                <td>{{i.lastname}}</td>
+                <td>{{i.phone}}</td>
+                <td>{{i.joined_date}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% comment %} <p>Back to <a href="/members">Members</a></p> {% endcomment %}
+
+
+{% endblock %}

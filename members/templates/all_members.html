@@ -1,0 +1,24 @@
+{% extends "master.html" %}
+
+{% block title %}
+    My Cricket Club - List of all members
+{% endblock %}
+    
+{% block content %}
+
+    {% comment %} <p>
+        <a href="/">HOME</a> | <a href="table/">Tabular Format</a>
+    </p> {% endcomment %}
+    <div class="mycard">
+        <h1>Members</h1>
+
+        <ul>
+            {% for x in mymember %}
+            <li onclick = "window.location='details/{{ x.id }}'">
+                    {{ x.firstname }} {{ x.lastname }}    
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}
